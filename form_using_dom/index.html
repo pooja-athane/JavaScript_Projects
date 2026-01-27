@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .card {
+            display: inline-block;
+            padding: 2vw;
+            border: 1px solid black;
+            margin-top: 1vw;
+        }
+
+        .profilepic {
+            height: 200px;
+            width: 300px;
+            border-radius: 2vw;
+            overflow: hidden;
+        }
+
+        .profilepic img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
+
 <body>
-    
-<form>
-    <input type="text" placeholder="profile pic"><br>
-    <input type="text" placeholder="enter name"><br>
-    <input type="text" placeholder="occupation"><br>
-    <input type="text" placeholder="info"><br>
-    <input type="submit">
-</form>
+
+    <form>
+        <input type="text" placeholder="profile pic"><br>
+        <input type="text" placeholder="enter name"><br>
+        <input type="text" placeholder="occupation"><br>
+        <input type="text" placeholder="info"><br>
+        <input type="submit">
+    </form>
 
     <!-- <div class="card">
     <div class="profilepic"></div>
@@ -24,8 +46,9 @@
     </p>
 </div> -->
 
-<div class="main"></div>
+    <div class="main"></div>
 
     <script type="module" src="script.js"></script>
 </body>
+
 </html>
