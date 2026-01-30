@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        .card {
+            position: relative;
+            width: 200px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 28px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .bg-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .Blurred-layer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://plus.unsplash.com/premium_photo-1664006988924-16f386bcd40e?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: cover;
+            background-position: bottom;
+            filter: blur(10px);
+            z-index: 1;
+            mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.0));
+            mask-size: 100% 100%;
+            mask-repeat: no-repeat;
+
+            -webkit-mask-image: linear-gradient(to top,
+                    rgba(0, 0, 0, 0.1),
+                    rgba(0, 0, 0, 0.0));
+
+            -webkit-mask-size: 100% 100%;
+            -webkit-mask-repeat: no-repeat;
+        }
+
+        .content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            z-index: 2;
+
+        }
+
+        .content h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .content p {
+            font-size: 14px;
+            color: #ddd;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex flex-col gap-10 item-center">
+        <input class="px-5 px-5 rounded outline-none bg-[#111] text-[#888]" type="text" placeholder="Search...">
+        <div class=" cards flex gap-10">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="bg-img">
+                <div class="Blurred-layer"></div>
+                <div class="content">
+                    <h3>User 123</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, voluptate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
