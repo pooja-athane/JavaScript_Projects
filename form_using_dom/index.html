@@ -25,16 +25,72 @@
             width: 100%;
             object-fit: cover;
         }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Form container */
+        form {
+            width: 320px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background-color: #f9f9f9;
+        }
+
+        /* Inputs */
+        form input[type="text"] {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #aaa;
+            font-size: 14px;
+            outline: none;
+        }
+
+        /* Focus effect */
+        form input[type="text"]:focus {
+            border-color: #000;
+        }
+
+        /* Submit button */
+        form input[type="submit"] {
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        /* Button hover */
+        form input[type="submit"]:hover {
+            background-color: #333;
+        }
+
+        /* Cards container */
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
     </style>
 </head>
 
 <body>
 
     <form>
-        <input type="text" placeholder="profile pic"><br>
-        <input type="text" placeholder="enter name"><br>
-        <input type="text" placeholder="occupation"><br>
-        <input type="text" placeholder="info"><br>
+        <input type="text" placeholder="Profile URL"><br>
+        <input type="text" placeholder="Enter Name"><br>
+        <input type="text" placeholder="Occupation"><br>
+        <input type="text" placeholder="Information"><br>
         <input type="submit">
     </form>
 
