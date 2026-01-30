@@ -27,8 +27,10 @@ form.addEventListener("submit", function (dets) {
         isValid = false
     }
 
-    if(isValid){
-        document.querySelector(".result").textContent = "Everything is correct"
+    if (isValid) {
+        document.querySelector(".result").textContent = "Form Submitted!"
     }
+
+    form.reset()
 
 })
