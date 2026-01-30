@@ -18,7 +18,7 @@ let interval = setInterval(function () {
       document.querySelector(".download-container").style.opacity = "0";
 
       setTimeout(function () {
-        document.querySelector(".download-container").style.display = "none";
+        docuSment.querySelector(".download-container").style.display = "none";
       }, 500);
     }, 3000);
   }
