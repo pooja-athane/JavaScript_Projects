@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to right, black, pink)
+}
+
+.container {
+  background: #fff;
+  padding: 25px;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.container h2 {
+  margin-bottom: 15px;
+}
+
+.container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.container button {
+  width: 100%;
+  padding: 12px;
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background: #5a67d8;
+}
+
+#result {
+  margin-top: 15px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+  </style>
+</head>
+
+<body>
+     <div class="container">
+    <h2>Smart Number Analyzer</h2>
+
+    <input type="number" id="numInput" placeholder="Enter a number">
+
+    <button onclick="analyze()">Analyze</button>
+
+    <p id="result"></p>
+  </div>
+
+
+</body>
+
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // 1
+        // array+loops == remove duplicaties from array
+
+        // let arr = [10, 28, 33, 21, 21, 10, 28]
+        // let unique = []
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     if (!unique.includes(arr[i])) {
+        //         unique.push(arr[i])
+        //     }
+
+        // }
+        // console.log(unique);
+
+        // builtin
+        // let arr1 = [10, 28, 33, 21, 21, 10, 28]
+
+        // let unique1 = [...new Set(arr1)]
+        // console.log(unique1);
+
+
+
+        //   🔍 Explanation
+        /* Set → unique values only
+        new Set(arr) → duplicates removed
+        ... → convert Set back to array*/
+        // “Set removes duplicates automatically and spread converts it back to array.”
+        // “I used Set because it stores only unique values I passed the array to Set to remove duplicates, then used the spread operator to convert it back into an array.”
+
+
+        // 2
+        // second largest number
+
+        // let arr = [10, 28, 33, 21, 21, 10, 28]
+        // let max = -Infinity
+        // let secondMax = -Infinity
+
+        // for (let value of arr) {
+        //     if (value > max) {
+        //         secondMax = max
+        //         max = value
+        //     } else if (value > secondMax && value !== max) {
+        //         secondMax = value
+        //     }
+        // }
+
+        // //  console.log(max);
+        // console.log(secondMax);
+
+
+        // 3
+        // check array sorted
+
+        let arr1 = [1, 2, 3, 4]
+        let isSorted = true
+
+        for (let i = 0; i < arr1.length - 1; i++) {
+            if (arr1[i] > arr1[i + 1]) {
+                isSorted = false
+                break
+            }
+        }
+        console.log(isSorted);
+
+        // 4
+        // pai with give sum
+        let arr = [2, 7, 11, 15];
+        let target = 9;
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] + arr[j] === target) {
+                    console.log(arr[i], arr[j]);
+                }
+            }
+        }
+
+        // 5
+        // palindrome array
+
+        let arr3 = [1, 2, 3, 4]
+        let isPal = true
+
+        for (let i = 0; i < arr3.length / 2; i++) {
+            if (arr[i] !== arr3[arr3.length - 1]) {
+                isPal = false
+            }
+        }
+
+        console.log(isPal);
+
+        // 6
+        // sort without sort()
+
+        let arr4 = [3, 1, 2]
+
+        for (let i = 0; i < arr4.length; i++) {
+            for (let j = i + 1; j < arr4.length; j++) {
+                if (arr4[i] > arr4[j]) {
+                    [arr4[i], arr4[j]] = [arr4[j], arr4[i]]
+                }
+            }
+        }
+        console.log(arr4);
+
+        // 7
+        // frequency Count
+        let arr5 = [1, 2, 2, 1]
+        let freq = {}
+
+        for (let num of arr5) {
+            freq[num] = (freq[num] || 0) + 1
+        }
+        console.log(freq);
+
+        /* “I used an object to store frequency For each element, if it already exists, I increment the count; otherwise, I initialize it to 1 using || 0.”*/
+        // convert map ot object
+        // let obj = Object.fromEntries(freqMap);
+
+        // console.log(obj);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
